@@ -1,0 +1,68 @@
+@import '../../../assets/scss/variables';
+
+.accordion__list {
+   .accordion__item {
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+      .accordion__header {
+         display: flex;
+         justify-content: space-between;
+         .radio-toggler__item {
+            max-width: 280px;
+            width: 100%;
+            margin-bottom: 0;
+            position: relative;
+            .radio-toggler__switcher {
+               padding-left: 70px;
+            }
+            .radio-toggler__img {
+               position: absolute;
+               top:-2px;
+               left: 30px;
+            }
+         }
+         ._icon-arrow-down {
+            &._active {
+               transform: rotate(180deg);
+            }
+         } 
+      }
+      .accordion__dropdown {
+         margin-top: 15px;
+         max-width: 240px;
+         width: 100%;
+         margin-left: auto;
+         margin-right: auto;
+         .radio-toggler__item {
+            .radio-toggler__checkbox {
+               &:checked + .radio-toggler__switcher::before {
+                  background-color: transparent; 
+                  border: 1px solid $BlueColor;
+               }
+            }
+            .radio-toggler__switcher {
+               padding-top: 0px;
+               &::before {
+                  width: 16px;
+                  height: 16px;
+                  border-radius: 50%;
+                  border-color: $BlueColor;
+               }
+               &::after {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  top: 4px;
+                  left: 4px;
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background-color: $BlueColor;
+               }
+            }
+         }
+      }
+   }
+}
+

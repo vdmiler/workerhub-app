@@ -1,0 +1,25 @@
+.page {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+/* ------ Media Queries ------ */
+
+/* 991.98-1268px - Large (container - 970px) */
+@media screen and (max-width: 1268px) {
+  
+}
+/* 767.98-991.98px - Medium (container - 750px) */
+@media screen and (max-width: 991.98px) {
+  
+}
+/* 479.98-767.98px - Small (container - 460px) */
+@media screen and (max-width: 767.98px) {
+  
+}
+/* .... - 479.98px - Mobile (padding 15px) */
+@media screen and (max-width: 479.98px) {
+  
+}

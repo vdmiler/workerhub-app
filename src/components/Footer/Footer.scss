@@ -1,0 +1,143 @@
+@import '../../assets/scss/_variables.scss';
+
+.footer {
+   background-color: $BlueColor;
+   color: $WhiteColor;
+   padding: 50px 0;
+   margin-top: auto;
+   .footer__body {
+      .footer__links.links {
+         display: flex;
+         justify-content: center;
+         .links__wrapp:not(:last-child) {
+            margin-right: 50px;
+         }
+         .links__wrapp {
+            .links__title {
+               margin-bottom: 20px;
+            }
+            .links__list {
+               .links__item:not(:last-child) {
+                  margin-bottom: 15px;
+               }
+               .links__item {
+                  .links__reference {
+                     font-weight: 400;
+                     font-size: 14px;
+                     line-height: 1.2em;
+                  }
+               }
+            }
+         }
+      }
+      .footer__social.social {
+         margin: 50px 0 20px;
+         padding-bottom: 20px;
+         border-bottom: 1px solid rgba($WhiteColor, 0.6);
+         .social__list {
+            display: flex;
+            justify-content: center;
+            .social__item:not(:last-child) {
+               margin-right: 16px;
+            }
+         }
+         .footer__apps {
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 30px 0;
+            .footer__apps-link {
+               width: 109px;
+               height: 35px;
+            }
+            .footer__apps-link:nth-child(1) {
+               background-image: url(../../assets/img/google_play_white.png);
+               margin-bottom: 0;
+               margin-right: 10px;
+            }
+            .footer__apps-link:nth-child(2) {
+               background-image: url(../../assets/img/app_store_white.png);
+            }
+         }
+      }
+      .footer__copyright.copyright {
+         display: flex;
+         justify-content: center;
+         .copyright__item:not(:last-child) {
+            &::after {
+               content: '';
+               display: inline-block;
+               width: 1px;
+               height: 17px;
+               background-color: $WhiteColor;
+               margin: -3px 30px;
+            }
+         }
+      }
+   }
+}
+
+/* ------ Media Queries ------ */
+
+/* 991.98-1268px - Large (container - 970px) */
+@media screen and (max-width: 1268px) {
+   .footer .footer__body .footer__links.links {
+      flex-direction: column;
+      align-items: center;
+   }
+   .footer .footer__body .footer__links.links .links__wrapp:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 40px;
+   }
+   .footer .footer__body .footer__links.links .links__wrapp {
+      text-align: center;
+   }
+}
+/* 767.98-991.98px - Medium (container - 750px) */
+@media screen and (max-width: 991.98px) {
+   .footer {
+      padding: 122px 0 22px;
+   }
+   .footer .footer__body .footer__social.social .footer__apps {
+      display: flex;
+   }
+   .footer .footer__body .footer__links.links .links__wrapp .links__title {
+      margin-bottom: 15px;
+   }
+   .footer .footer__body .footer__links.links .links__wrapp .links__list .links__item:not(:last-child) {
+      margin-bottom: 10px;
+   }
+   .footer .footer__body .footer__social.social {
+      margin-top: 66px;
+      margin-bottom: 14px;
+   }
+   .footer .footer__body .footer__copyright.copyright {
+      flex-wrap: wrap;
+   }
+   .footer .footer__body .footer__copyright.copyright .copyright__item:nth-child(1) {
+      order: 1;
+   }
+   .footer .footer__body .footer__copyright.copyright .copyright__item:nth-child(2) {
+      order: 3;
+      text-align: center;
+      width: 100%;
+      &::after {
+         display: none;
+      }
+   }
+   .footer .footer__body .footer__copyright.copyright .copyright__item:nth-child(3) {
+      order: 2;
+   }
+   .footer .footer__body .footer__copyright.copyright .copyright__item:not(:last-child)::after {
+      margin-left: 15px;
+      margin-right: 15px;
+   }
+}
+/* 479.98-767.98px - Small (container - 460px) */
+@media screen and (max-width: 767.98px) {
+  
+}
+/* .... - 479.98px - Mobile (padding 15px) */
+@media screen and (max-width: 479.98px) {
+  
+}

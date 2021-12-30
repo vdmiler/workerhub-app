@@ -1,0 +1,109 @@
+@import '../../assets/scss/_variables.scss';
+
+.download {
+   padding: 205px 0 170px;
+   .download__jaw {
+      background-color: #FAF5FF;
+      padding: 87px 0;
+      .download__body {
+         position: relative;
+         display: flex;
+         align-items: center;
+         .download__picture {
+            background-image: url(../../assets/img/mobile.png);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            width: 264.51px;
+            height: 422.35px;
+            position: absolute;
+            bottom: -60px;
+            left: 79px;
+         }
+         .download__content {
+            margin-left: 420px;
+            margin-right: 126px;
+            max-width: 396px;
+            width: 100%;
+            .download__title {
+               margin-bottom: 23px;
+            }
+            .download__text {
+               color: $GrayColor;
+            }
+         }
+      }
+   }
+}
+
+/* ------ Media Queries ------ */
+
+/* 991.98-1268px - Large (container - 970px) */
+@media screen and (max-width: 1268px) {
+   .download .download__jaw .download__body .download__content {
+      margin-left: 387px;
+      margin-right: 40px;
+      max-width: 340px;
+   }
+}
+/* 767.98-991.98px - Medium (container - 750px) */
+@media screen and (max-width: 991.98px) {
+   .download {
+      padding: 0;
+   }
+   .download .download__jaw {
+      padding: 40px 0;
+   }
+   .download .download__jaw .download__body .download__picture {
+      position: static;
+      background-image: url(../../assets/img/mobile_1.png);
+      width: 313px;
+      height: 234px;
+      margin-bottom: 25px;
+   }
+   .download .download__jaw .download__body .download__content {
+      max-width: 280px;
+      margin-left: 0;
+      margin-right: 0;
+   }
+   .download .download__jaw .download__body .download__content .download__title::before {
+      display: none;
+   }
+   .download .download__jaw .download__body .download__content .download__title::after {
+      content: '';
+      display: block;
+      width: 159px;
+      height: 1px;
+      background-color: $MainColor;
+      margin: 18px 0 20px;
+   }
+   .download .download__jaw .download__body {
+      flex-direction: column;
+      align-items: center;
+   }
+   .download .download__jaw .download__body .download__apps {
+      margin-top: 40px;
+      display: flex;
+      align-items: flex-start;
+   }
+   .download .download__jaw .download__body .download__apps .download__link {
+      width: 144px;
+      height: 46px;
+      margin-bottom: 0;
+      margin-right: 13px;
+   }
+   .download .download__jaw .download__body .download__apps .download__link:nth-child(1) {
+      background-image: url(../../assets/img/app_store_black.png);
+   }
+   .download .download__jaw .download__body .download__apps .download__link:nth-child(2) {
+      background-image: url(../../assets/img/google_play_black.png);
+   }
+}
+/* 479.98-767.98px - Small (container - 460px) */
+@media screen and (max-width: 767.98px) {
+  
+}
+/* .... - 479.98px - Mobile (padding 15px) */
+@media screen and (max-width: 479.98px) {
+  
+}

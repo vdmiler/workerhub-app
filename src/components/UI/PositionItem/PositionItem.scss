@@ -1,0 +1,228 @@
+@import '../../../assets/scss/_variables.scss';
+
+.position__item {
+   width: 100%;
+   min-height: 206px;
+   border: 1px solid #eaeaea;
+   padding: 20px;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   &:not(:last-child) {
+      margin-bottom: 40px;
+   }
+   .position__avatar {
+      width: 164px;
+      height: 164px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+      img {
+         width: 164px;
+         height: 164px;
+      }
+   }
+   .position__description {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .position__header {
+         .position__avatar {
+            display: none;
+         }
+         .position__wrapp {
+            .position__title {
+               color: $BlueColor;
+               margin-bottom: 16px;
+            }
+            .details__info {
+               margin-top: 6px;
+               display: none;
+               .details__nameAge {
+                  font-size: 16px;
+               }
+               .details__local {
+                  font-size: 13px;
+               }
+            }
+         }
+      }
+      .position__details.details {
+         .details__info {
+            display: flex;
+            font-size: 16px;
+            margin: 16px 0;
+            .details__nameAge {
+               margin-right: 20px;
+               color: $BlueColor;
+            }
+            .details__local {
+               display: flex;
+               i {
+                  margin-right: 10px;
+               }
+            }
+         }
+      }
+      .details__experience.experience {
+         .experience__item {
+            color: $GrayColor;
+            &:not(:last-child) {
+               margin-bottom: 12px;
+            }
+         }
+      }
+      .details__updated.updated {
+         display: flex;
+         font-size: 12px;
+         margin-top: 20px;
+         .updated__text {
+            color: #adadad;
+            margin-right: 20px;
+         }
+         .updated__indicator {
+            display: flex;
+            align-items: center;
+            .updated__icon {
+               width: 12px;
+               height: 12px;
+               border-radius: 50%;
+               background-color: #4d914f;
+               margin-right: 4px;
+            }
+            .updated__online {
+               color: #4caf50;
+            }
+         }
+      } 
+   }
+   .position__settings {
+      display: flex;
+      color: #851fff;
+      font-size: 24px;
+      margin-left: auto;
+      .position__wishlist {
+         cursor: pointer;
+         margin-right: 12px;
+         &._active {
+            i {
+               color: #f50057;
+            }
+         }
+      }
+      .position__extra {
+         cursor: pointer;
+         position: relative;
+         .extra__menu {
+            display: none;
+            position: absolute;
+            top: -15px;
+            right: 210px;
+            width: 100%;
+            height: 100%;   
+            &._active {
+               display: block;
+            }
+            .extra__list {
+               width: 174px;
+               padding: 20px;
+               background-color: $WhiteColor;
+               border: 0.5px solid #eaeaea;
+               .extra__item {
+                  &:not(:last-child) {
+                     margin-bottom: 20px;
+                  }
+                  .extra__link {
+                     color: $MainColor;
+                     font-size: 14px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+/* ------ Media Queries ------ */
+
+/* 991.98-1268px - Large (container - 970px) */
+@media screen and (max-width: 1268px) {
+   
+}
+/* 767.98-991.98px - Medium (container - 750px) */
+@media screen and (max-width: 991.98px) {
+   
+}
+/* 479.98-767.98px - Small (container - 460px) */
+@media screen and (max-width: 767.98px) {
+   .position__item:not(:last-child) {
+      margin-bottom: 47px;
+   }
+   .position__item {
+      position: relative;
+      padding: 16px;
+   }
+   .position__item .position__avatar {
+      display: none;
+   }
+   .position__item .position__description .position__header {
+      display: flex;
+      margin-bottom: 26px;
+   }
+   .position__item .position__description .position__header .position__avatar {
+      width: 70px;
+      height: 70px;
+      display: block;
+      margin-right: 16px;
+   }
+   .position__item .position__avatar img {
+      width: 70px;
+      height: 70px;
+   }
+   .position__item .position__settings {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+   }
+   .position__item .position__description .position__header .position__title {
+      font-size: 16px;
+   }
+   .position__item .position__description .position__details.details .details__info {
+      display: none;
+   }
+   .position__item .position__description .position__header .position__wrapp .details__info {
+      display: flex;
+      flex-direction: column;
+   }
+   .position__item .position__description .position__header .position__wrapp .details__info .details__nameAge {
+      margin-bottom: 6px;
+   }
+   .position__item .position__description .position__header .position__wrapp .details__info .details__local {
+      display: flex;
+   }
+   .position__item .position__description .position__header .position__wrapp .details__info .details__local i {
+      margin-right: 12px;
+   }
+   .position__item .position__description .details__updated.updated {
+      flex-direction: column-reverse;
+   }
+   .position__item .position__description .details__updated.updated .updated__indicator {
+      margin-bottom: 20px;
+   }
+   .position__item .position__settings .position__extra .extra__menu {
+      top: 30px;
+      right: 190px;
+   }
+   .summaries .summaries__body .summaries__list .pagination {
+      margin-top: 40px;
+   }
+}
+/* .... - 479.98px - Mobile (padding 15px) */
+@media screen and (max-width: 479.98px) {
+  
+}

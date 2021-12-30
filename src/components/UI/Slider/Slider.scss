@@ -1,0 +1,39 @@
+.blog-slider {
+   margin-top: 27px;
+   .blog-slider__item {
+      max-width: 397px;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d1d1;
+      box-sizing: border-box;
+      .blog-slider__wrapper {
+         .blog-slider__content {
+            max-width: 160px;
+            width: 100%;
+            margin-top: 30px;
+            .blog-slider__title {
+               margin-bottom: 15px;
+            }
+         }
+      }
+   }
+}
+
+.blog-slider {
+   .swiper-wrapper {
+      padding-bottom: 88px;
+   }
+   .swiper-pagination {
+      .swiper-pagination-bullet{
+         width: 12px;
+         height: 12px;
+         background: none;
+         border: 1px solid #2a172d;
+         opacity: 1;
+         &.swiper-pagination-bullet-active {
+            background-color: #2a172d;
+         }
+      } 
+   }
+}
+

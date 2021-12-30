@@ -1,0 +1,35 @@
+@import '../../../assets/scss/variables';
+
+.login-form {
+   .login-form__title {
+      text-align: center;
+      margin-bottom: 20px;
+   }
+   .login-form__item {
+      &._error {
+         .login-form__input {
+            border-color: #e91e63;
+         }
+      }
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+      .login-form__input {
+         border: 1px solid $BlueColor;
+         color: $BlueColor;
+         &::placeholder {
+            color: $BlueColor;
+         }
+      }
+      .error__msg {
+         margin-top: 2px;
+         font-size: 13px;
+         color: #e91e63;
+      }
+   }
+   .login-form__btn {
+      display: block;
+      max-width: inherit;
+      margin: 25px auto 0 auto;
+   }
+}

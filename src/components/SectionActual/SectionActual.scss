@@ -1,0 +1,78 @@
+@import '../../assets/scss/_variables.scss';
+
+.actual {
+   padding: 80px 0;
+   .actual__body {
+      .actual__list {
+         display: flex;
+         justify-content: space-between;
+         .actual__item {
+            max-width: 396px;
+            width: 100%;
+            min-height: 396px;
+            background-color: #e2cbff;
+            border: 1px solid #000046;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all .5s ease;
+            &:hover {
+               background-color: #c893ea;
+            }
+            .actual__wrapper {
+               .actual__counter {
+                  font-weight: 700;
+                  font-size: 48px;
+                  margin-bottom: 30px;
+                  &::before {
+                     content: '';
+                     display: block;
+                     width: 83px;
+                     height: 1px;
+                     background-color: $MainColor;
+                     margin: 0 auto 30px auto;
+                  }
+               }
+               .actual__text {
+               }
+            }
+         }
+      }
+   }
+}
+
+/* ------ Media Queries ------ */
+
+/* 991.98-1268px - Large (container - 970px) */
+@media screen and (max-width: 1268px) {
+   .actual .actual__body .actual__list {
+      flex-direction: column;
+      align-items: center;
+   }
+   .actual .actual__body .actual__list .actual__item:not(:last-child) {
+      margin-bottom: 20px;
+   }
+}
+/* 767.98-991.98px - Medium (container - 750px) */
+@media screen and (max-width: 991.98px) {
+  .actual {
+     padding: 40px 0;
+  }
+  .actual .actual__body .actual__list .actual__item {
+     max-width: 335px;
+     min-height: 259px;
+  }
+  .actual .actual__body .actual__list .actual__item .actual__wrapper .actual__counter {
+     margin-bottom: 24px;
+  }
+}
+/* 479.98-767.98px - Small (container - 460px) */
+@media screen and (max-width: 767.98px) {
+  
+}
+/* .... - 479.98px - Mobile (padding 15px) */
+@media screen and (max-width: 479.98px) {
+  
+}

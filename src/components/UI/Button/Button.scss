@@ -1,0 +1,15 @@
+@import '../../../assets/scss/_variables.scss';
+
+.btn {
+   max-width: 228px;
+   width: 100%;
+   border: none;
+   background-color: $BlueColor;
+   color: $WhiteColor;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 1.2em;
+   text-align: center;
+   padding: 14px 0;
+   cursor: pointer;
+}

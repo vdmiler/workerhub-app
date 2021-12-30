@@ -1,0 +1,13 @@
+@import '../../../assets/scss/_variables.scss';
+
+._titles {
+   text-transform: uppercase;
+   &::before {
+      content: '';
+      display: block;
+      width: 170px;
+      height: 1px;
+      background-color: $MainColor;
+      margin-bottom: 12px;
+   }
+}

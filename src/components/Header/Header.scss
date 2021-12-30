@@ -1,0 +1,278 @@
+@import '../../assets/scss/_variables.scss';
+
+.header {
+   color: $WhiteColor;
+   .header__top-bar.top-bar {
+      background-color: #251427;
+      padding: 12px 0;
+      &._light {
+         background-color: $BlueColor;
+      }
+      .top-bar__body {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         .top-bar__menu.menu {
+            .menu__list {
+               display: flex;
+               .menu__item {
+                  &._active {
+                     a {
+                        text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+                     }
+                  }
+               }
+               .menu__item:not(:last-child) {
+                  &::after {
+                     content: '';
+                     display: inline-block;
+                     width: 1px;
+                     height: 12px;
+                     background-color: $WhiteColor;
+                     margin: -1px 12px;
+                  }
+               }
+            }
+         }
+         .top-bar__wrapper {
+            display: flex;
+            align-items: center;
+            .top-bar__lang.lang {
+               display: flex;
+               .lang__icon {
+                  margin-right: 5px;
+               }
+               .lang__list {
+                  margin-right: 5px;
+                  .lang__item {
+                     display: none;
+                     &._active {
+                        display: block;
+                     }
+                  }
+               }
+               .lang__btn {
+                  padding: 0;
+                  border: none;
+                  background: none;
+                  color: $WhiteColor;
+                  cursor: pointer;
+               }
+            }
+            .top-bar__login {
+               padding: 0;
+               border: none;
+               background: none;
+               color: $WhiteColor;
+               font-weight: 500;
+               font-size: 14px;
+               border-bottom: 1px solid $WhiteColor;
+               margin-left: 20px;
+               transition: all .5s ease;
+               &:hover,
+               &:active {
+                  border-color: transparent;
+               }
+            }
+         }
+      }
+   }
+   .header__offer.offer {
+      background-color: $BlueColor;
+      padding: 54px 0 59px;
+      text-align: center;
+      .offer__body {
+         max-width: 830px;
+         width: 100%;
+         margin: 0 auto;
+         .offer__hamburger-btn {
+            display: none;
+            border: none;
+            background: none;
+            width: 18px;
+            height: 12px;
+            position: relative;
+            span {
+               height: 2px;
+               background-color: $WhiteColor;
+               position: absolute;
+               right: 0;
+               &:nth-child(1) {
+                  width: 12px;
+                  top: 0;
+               }
+               &:nth-child(2) {
+                  width: 100%;
+                  top: 50%;
+                  margin-top: -1px;
+               }
+               &:nth-child(3) {
+                  width: 12px;
+                  bottom: 0;
+               }
+            }
+         }
+         .offer__text {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 0.8em;
+            &._disabled {
+               display: none;
+            }
+         }
+         .offer__title {
+            color: $WhiteColor;
+            max-width: 749px;
+            width: 100%;
+            margin: 30px auto 60px auto;
+            &._disabled {
+               display: none;
+            }
+         }
+         .offer__search-panel.search-panel {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            .search-panel__item:nth-child(1) {
+               max-width: 410px;
+               width: 100%;
+               &::before {
+                  content: "\e907";
+               }
+            }
+            .search-panel__item:nth-child(2) {
+               max-width: 205px;
+               width: 100%;
+               &::before {
+                  content: "\e905";
+               }
+            }
+            .search-panel__item {
+               margin-right: 8px;
+               position: relative;
+               &::before {
+                  font-family: 'icons';
+                  color: $WhiteColor;
+                  position: absolute;
+                  top: 17px;
+                  left: 17px;
+               }
+               .search-panel__results {
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  max-width: 205px;
+                  width: 100%;
+                  max-height: 200px;
+                  background-color: $WhiteColor;
+                  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  overflow: hidden;
+                  overflow-y: auto;
+                  &::-webkit-scrollbar {
+                     display: none;
+                  }
+                  &._active {
+                     display: block;
+                  }
+                  .search-panel__results-item {
+                     width: 100%;
+                     height: 50px;
+                     display: flex;
+                     align-items: center;
+                     color: $MainColor;
+                     padding-left: 10px;
+                     cursor: pointer;
+                     &:hover {
+                        background-color: rgba(0, 0, 0, 0.35);
+                     }
+                  }
+               }
+            }
+            .search-panel__btn {
+               max-width: 200px;
+               &._light {
+                  background-color: $WhiteColor;
+                  color: $MainColor;
+               }
+            }
+         }
+      }
+   }
+}
+
+/* ------ Media Queries ------ */
+
+/* 991.98-1268px - Large (container - 970px) */
+@media screen and (max-width: 1268px) {
+  
+}
+/* 767.98-991.98px - Medium (container - 750px) */
+@media screen and (max-width: 991.98px) {
+   h1 {
+      font-size: 30px;
+   }
+   .header .header__top-bar.top-bar {
+      padding: 5px 0;
+   }
+   .header .header__top-bar.top-bar .top-bar__body .top-bar__wrapper {
+      display: none;
+   }
+   .header .header__top-bar.top-bar .top-bar__body {
+      justify-content: flex-end;
+   }
+   .header .header__top-bar.top-bar .top-bar__body .top-bar__menu.menu .menu__list .menu__item {
+      display: none;
+      font-size: 13px;
+      margin-right: 10px;
+   }
+   .header .header__top-bar.top-bar .top-bar__body .top-bar__menu.menu .menu__list .menu__item._active {
+      display: block;
+   }
+   .header .header__top-bar.top-bar .top-bar__body .top-bar__menu.menu .menu__list .menu__item:not(:last-child)::after {
+      content: '\e90e';
+      font-family: "icons";
+      color: $WhiteColor;
+      font-size: 10px;
+      width: 0;
+      height: 0;
+      margin: 0 0 0 7px;
+   }
+   .header .header__offer.offer .offer__body .offer__hamburger-btn {
+      display: block;
+      margin: 0 auto 42px auto;
+   }
+   .header .header__offer.offer {
+      padding: 10px 0 47px;
+   }
+   .header .header__offer.offer .offer__body {
+      max-width: 335px;
+   }
+   .header .header__offer.offer .offer__body .offer__title {
+      margin-top: 20px;
+   }
+   .header .header__offer.offer .offer__body .offer__text {
+      font-size: 14px;
+   }
+   .header .header__offer.offer .offer__body .offer__search-panel.search-panel {
+      flex-direction: column;
+      align-items: center;
+   }
+   .header .header__offer.offer .offer__body .offer__search-panel.search-panel .search-panel__item {
+      max-width: inherit !important;
+      margin-bottom: 12px;
+   }
+   .header .header__offer.offer .offer__body .offer__search-panel.search-panel .search-panel__item:nth-child(1),
+   .header .header__offer.offer .offer__body .offer__search-panel.search-panel .search-panel__item:nth-child(2) {
+      margin-right: 0;
+   }
+}
+/* 479.98-767.98px - Small (container - 460px) */
+@media screen and (max-width: 767.98px) {
+  
+}
+/* .... - 479.98px - Mobile (padding 15px) */
+@media screen and (max-width: 479.98px) {
+  
+}

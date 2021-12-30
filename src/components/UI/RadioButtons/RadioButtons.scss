@@ -1,0 +1,28 @@
+@import '../../../assets/scss/variables';
+
+.radio-buttons {
+   display: flex;
+   justify-content: space-between;
+   .radio-buttons__label {
+      .radio-buttons__checkbox {
+         display: none;
+         &:checked + .radio-buttons__switcher {
+            background-color: $BlueColor;
+            color: $WhiteColor;
+         }
+      }
+      .radio-buttons__switcher {
+         display: block;
+         width: 108px;
+         height: 44px;
+         background-color: transparent;
+         border: 1px solid $BlueColor;
+         color: $BlueColor;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: .2s;    
+         cursor: pointer;     
+      }
+   }
+}

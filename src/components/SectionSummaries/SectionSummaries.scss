@@ -1,0 +1,117 @@
+@import '../../assets/scss/_variables.scss';
+
+.summaries {
+   padding: 60px 0;
+   .summaries__body {
+      display: flex;
+      justify-content: space-between;
+      .summaries__list {
+         max-width: 838px;
+         width: 100%;
+         .summaries__header {
+            margin-bottom: 40px;
+            .summaries__filter-btn {
+               display: none;
+               border: 0;
+               background: 0;
+               align-self: start;
+               margin-left: auto;
+               margin-bottom: 20px;
+            }
+            .summaries__title {
+               margin-bottom: 20px;
+            }
+            .summaries__sorting {
+               font-size: 16px;
+               display: flex;
+               .summaries__dropdown.dropdown {
+                  margin-left: 12px;
+                  .dropdown__item {
+                     font-weight: 500;
+                     color: $PurpureColor;
+                  }
+                  i {
+                     margin-left: 16px;
+                     color: $PurpureColor;
+                  }
+               }
+            }
+         }
+         .pagination {
+            margin-top: 70px;
+            display: flex;
+            justify-content: center;
+            .page-item {
+               width: 25px;
+               height: 25px;
+               border-radius: 50%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               cursor: pointer;
+               margin: 0 2px;
+               &._active {
+                  background-color: $BlueColor;
+                  .page-link {
+                     color: $WhiteColor;
+                  }
+               }
+               .page-link {
+                  font-size: 16px;
+                  color: #adadad;
+               }
+            }
+         }
+      }
+   }
+   .summaries__filters.filters {
+      max-width: 363px;
+      width: 100%;
+      .filters__title {
+         margin-bottom: 15px;
+      }
+   }
+}
+
+/* ------ Media Queries ------ */
+
+/* 991.98-1268px - Large (container - 970px) */
+@media screen and (max-width: 1268px) {
+   .summaries .summaries__body {
+      justify-content: center;
+   }
+   .summaries .summaries__filters.filters {
+      display: none;
+   }
+   .summaries .summaries__body .summaries__list .summaries__header .summaries__filter-btn {
+      display: block;
+   }
+   .summaries .summaries__body .summaries__list .summaries__header .summaries__title {
+      margin-bottom: 25px;
+   }
+}
+/* 767.98-991.98px - Medium (container - 750px) */
+@media screen and (max-width: 991.98px) {
+   .summaries {
+      padding: 40px 0 80px;
+   }
+   .summaries .summaries__body .summaries__list .summaries__header .summaries__sorting .summaries__text {
+      max-width: 156px;
+      width: 100%;
+      font-size: 12px;
+   }
+   .summaries .summaries__body .summaries__list .summaries__header .summaries__sorting .summaries__dropdown.dropdown {
+      margin-left: auto;
+   }
+   .summaries .summaries__body .summaries__list .summaries__header {
+      margin-bottom: 47px;
+   }
+}
+/* 479.98-767.98px - Small (container - 460px) */
+@media screen and (max-width: 767.98px) {
+  
+}
+/* .... - 479.98px - Mobile (padding 15px) */
+@media screen and (max-width: 479.98px) {
+  
+}

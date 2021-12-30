@@ -1,0 +1,19 @@
+@import '../../../assets/scss/_variables.scss';
+
+.input {
+   width: 100%;
+   border:none;
+   background-color: rgba(255, 255, 255, 0.15);
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   color: $WhiteColor;
+   line-height: 1.6em;
+   padding: 13px 12px 13px 46px;
+   &::placeholder {
+      color: $WhiteColor;
+   }
+   @media screen and (max-width: 991.98px) {
+      font-size: 16px;
+   }
+}

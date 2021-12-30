@@ -1,0 +1,19 @@
+@import '../../../assets/scss/_variables.scss';
+
+.apps {
+   .apps__link {
+      display: block;
+      width: 185px;
+      height: 61px;
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: 100%;
+   }
+   .apps__link:nth-child(1) {
+      background-image: url(../../../assets/img/app_store_blue.png);
+      margin-bottom: 10px;
+   }
+   .apps__link:nth-child(2) {
+      background-image: url(../../../assets/img/google_play_blue.png);
+   }
+}

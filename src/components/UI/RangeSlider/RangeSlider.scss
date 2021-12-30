@@ -1,0 +1,40 @@
+@import '../../../assets/scss/_variables.scss';
+
+.range__slider{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-size: 16px;
+   color: $GrayColor;
+   .range__input {
+      display: flex;
+      align-items: center;
+      .range__start {
+         display: inline-block;
+         margin-right: 12px;
+      }
+      .range__end {
+         margin-left: 12px;
+      }
+   }
+   #output {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      .output__start {
+         margin-right: 10px;
+      }
+      .output__numb {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 85px;
+         height: 36px;
+         border: 1px solid $GrayColor;
+      }
+      .output__end {
+         margin-left: 51px;
+         margin-right: 10px;
+      }
+   } 
+}

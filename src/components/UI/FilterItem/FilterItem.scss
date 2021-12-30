@@ -1,0 +1,13 @@
+.filters__item {
+   padding: 20px;
+   box-sizing: border-box;
+   color: #555556;
+   &:not(:last-child) {
+      margin-bottom: 15px;
+   }
+   .filters__itemTitle {
+      padding-bottom: 12px;
+      border-bottom: 1px solid #EAEAEA;
+      margin-bottom: 24px;
+   }
+}

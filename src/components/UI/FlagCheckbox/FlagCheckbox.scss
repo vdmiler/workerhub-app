@@ -1,0 +1,45 @@
+@import '../../../assets/scss/variables';
+
+.flag-checkbox {
+   display: flex;
+   margin-top: 27px;
+   .flag-checkbox__ico {
+      margin-right: 10px;
+   }
+   .flag-checkbox__text {
+      font-weight: 300;
+      font-size: 14px;
+      color: $GrayColor;
+   }
+   .flag-checkbox__label {
+      margin-left: auto;
+      .flag-checkbox__checkbox {
+         display: none;
+         &:checked + .flag-checkbox__switcher::after {
+            left: 20px;
+         }
+      }
+      .flag-checkbox__switcher {
+         position: relative;
+         display: inline-block;
+         width: 27px;
+         height: 10px;
+         background-color: #eaeaea;
+         border-radius: 12px;
+         cursor: pointer;       
+         &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 6px;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background-color: #5b5b5b;
+            border-radius: 50%;
+            transition: .2s;
+         }
+      }
+   }
+}

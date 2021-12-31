@@ -460,7 +460,7 @@ export const sliderItems = [
    },
 ]
 
-export const API_URL = 'https://worker-hub.herokuapp.com/api/results';
+export const API_URL = 'https://json-faker-api.herokuapp.com/results';
 
 export const getWorkExperience = (firstDate, secondDate) => {
    const dateFrom = new Date(firstDate),

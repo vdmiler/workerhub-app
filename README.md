@@ -7,4 +7,4 @@ Use in project
 * react-paginate
 
 `App:`https://worker-hub.herokuapp.com
-`Server:` https://worker-hub.herokuapp.com/api/results
+`Server:` https://json-faker-api.herokuapp.com/results
